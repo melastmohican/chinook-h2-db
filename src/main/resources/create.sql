@@ -1,4 +1,15 @@
-﻿DROP TABLE IF EXISTS "PlaylistTrack";
+﻿DROP INDEX IF EXISTS "IFK_PlaylistTrackTrackId";
+DROP INDEX IF EXISTS "IFK_InvoiceLineInvoiceId";
+DROP INDEX IF EXISTS "IFK_InvoiceLineTrackId";
+DROP INDEX IF EXISTS "IFK_InvoiceCustomerId";
+DROP INDEX IF EXISTS "IFK_CustomerSupportRepId";
+DROP INDEX IF EXISTS "IFK_EmployeeReportsTo";
+DROP INDEX IF EXISTS "IFK_TrackAlbumId";
+DROP INDEX IF EXISTS "IFK_TrackGenreId";
+DROP INDEX IF EXISTS "IFK_TrackMediaTypeId";
+DROP INDEX IF EXISTS "IFK_AlbumArtistId";
+
+DROP TABLE IF EXISTS "PlaylistTrack";
 DROP TABLE IF EXISTS "Playlist";
 DROP TABLE IF EXISTS "InvoiceLine";
 DROP TABLE IF EXISTS "Invoice";
@@ -192,3 +203,5 @@ ALTER TABLE "Track" ADD CONSTRAINT "FK_TrackMediaTypeId"
     FOREIGN KEY ("MediaTypeId") REFERENCES "MediaType" ("MediaTypeId") ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 CREATE INDEX "IFK_TrackMediaTypeId" ON "Track" ("MediaTypeId");
+
+COMMIT;

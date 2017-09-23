@@ -10,10 +10,16 @@ class App {
         //def sql = Sql.newInstance("jdbc:h2:mem:chinook;MODE=DB2", "org.h2.Driver")
         def sql = Sql.newInstance("jdbc:h2:./chinook;MODE=DB2", "org.h2.Driver")
 
-        //sql.execute("Chinook_H2.sql")
-        String sqlFilePath = "src/main/resources/Chinook_H2.sql"
-        String sqlString = new File(sqlFilePath).text
-        sql.execute(sqlString)
+        String currentDir = new File(".").getCanonicalPath()
+        println currentDir
+
+        println "Creating tables"
+        String createSQL = new File("src/main/resources/create.sql").text
+        sql.execute(createSQL)
+
+        println "Populating tables"
+        String populateSQL = new File("src/main/resources/populate.sql").text
+        sql.execute(populateSQL)
 
         // Execute a normal sql query on this table...
         sql.eachRow('select * from "Track"') { row ->
