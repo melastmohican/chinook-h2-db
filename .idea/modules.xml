@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chinook-h2-db.iml" filepath="$PROJECT_DIR$/chinook-h2-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chinook-h2-db_main.iml" filepath="$PROJECT_DIR$/.idea/modules/chinook-h2-db_main.iml" group="chinook-h2-db" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chinook-h2-db_test.iml" filepath="$PROJECT_DIR$/.idea/modules/chinook-h2-db_test.iml" group="chinook-h2-db" />
+    </modules>
+  </component>
+</project>
