@@ -3,3 +3,6 @@ build
 .idea/libraries
 workspace.xml
 chinook.*.db
+db
+.idea
+*.iml
