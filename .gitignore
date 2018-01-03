@@ -6,3 +6,7 @@ chinook.*.db
 db
 .idea
 *.iml
+.settings
+.classpath
+.project
+bin
